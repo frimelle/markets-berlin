@@ -11,3 +11,4 @@ TODO:
 
 - remove marker when choosing a new day 
 - default: today, now
+- footer
