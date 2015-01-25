@@ -4,5 +4,5 @@ A overview on the regular markets in Berlin, using Open Data from daten.berlin.d
 [WIP]
 
 TODO:
-- add markers on the map, when matching to selection
+- remove marker when choosing a new day 
 - default: today, now
