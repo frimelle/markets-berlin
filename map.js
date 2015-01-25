@@ -48,9 +48,10 @@ function getMarkets(day, time) {
 					//check for the time
 					if (time >= data[index].ZeitenOn && time <= data[index].ZeitenOff) {	
 						geo = data[index].Geolocations
-						alert(geo);
-						var marker = L.marker(geo).addTo(map);
-						marker.bindPopup("<b>Hello Charlie!</b><br>I am a popup."); 
+						//alert(geo);
+						//geo = [52.4016530, 13.0621240];
+						var marker = L.marker(L.latLng(geo)).addTo(map);
+						marker.bindPopup("<b>" + data[index].Name + "</b>" + "<br>" + data[index].Ort); 
 					}
 				}
 			}
