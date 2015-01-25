@@ -1,0 +1,19 @@
+#map { 
+	height: 768px; 
+	width:1600px;
+}
+
+#corner { 
+	height: 170px;
+	width: 300px;
+	text-align: center;
+	background: rgba(128,128,128,0.6);
+	position:absolute;
+	top:20px;
+	right:20px;
+}
+
+p  {
+    font-family:courier;
+    font-size:80%;
+}
