@@ -4,7 +4,7 @@ A overview on the regular markets in Berlin, using Open Data from daten.berlin.d
 [WIP]
 Demo: 
 
-file:///home/fuzzle/HTW/OpenData/markets-berlin/index.html
+http://frimelle.github.io/markets-berlin/
 
 TODO:
 
