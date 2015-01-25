@@ -17,9 +17,9 @@ var todaysDate = new Date();
 
 if (inputDate.setHours(0,0,0,0) == todaysDate.setHours(0,0,0,0)) {
 
-	var marker = L.marker([52.4016530, 13.0621240]).addTo(map);
+//	var marker = L.marker([52.4016530, 13.0621240]).addTo(map);
 
-	marker.bindPopup("<b>Hello Charlie!</b><br>I am a popup."); // default open: .openPopup();
+//	marker.bindPopup("<b>Hello Charlie!</b><br>I am a popup."); // default open: .openPopup();
 
 };
 
@@ -37,20 +37,20 @@ function getMarkets(day, time) {
 	// get the data
 	$.getJSON( "./data/berlin-markets.json", function(data) {
 		$.each(data, function(index) {
-
-			if (/\s/.test(data[index].Tage)) {
 			//split days into array
-				var arrayDays = data[index].Tage.split(' ');
+			var arrayDays = data[index].Tage.split(' ');
 				
-				//loop through days
-				for (var i = 0; i < arrayDays.length; i++) {
+			//loop through days
+			for (var i = 0; i < arrayDays.length; i++) {
 
-					if (arrayDays[i] == day) {
-						//alert(data[index].ZeitenOff);
-						//check for the time
-						if (time >= data[index].ZeitenOn && time <= date[index].ZeitenOff) {	
-							alert("Yes");
-						}
+				if (arrayDays[i] == day) {
+
+					//check for the time
+					if (time >= data[index].ZeitenOn && time <= data[index].ZeitenOff) {	
+						geo = data[index].Geolocations
+						alert(geo);
+						var marker = L.marker(geo).addTo(map);
+						marker.bindPopup("<b>Hello Charlie!</b><br>I am a popup."); 
 					}
 				}
 			}
