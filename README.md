@@ -3,6 +3,12 @@ A overview on the regular markets in Berlin, using Open Data from daten.berlin.d
 
 [WIP]
 
+Demo: 
+
+http://frimelle.github.io/markets-berlin/
+
 TODO:
+
 - remove marker when choosing a new day 
 - default: today, now
+- footer
