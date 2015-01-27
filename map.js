@@ -1,60 +1,93 @@
-var map = L.map( 'map', {
-    center: [52.510, 13.5],
-    minZoom: 11,
-    zoom: 10
-});
+var marketsBerlin = (function() {
 
-L.tileLayer( 'http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright" title="OpenStreetMap" target="_blank">OpenStreetMap</a> contributors | Tiles Courtesy of <a href="http://www.mapquest.com/" title="MapQuest" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png" width="16" height="16">',
-    subdomains: ['otile1','otile2','otile3','otile4']
-}).addTo( map );
+	var map,
+		markerArray,
+		marketData;
 
+	function getMarkets(day, time) {
+		//delete markers from before
+		deleteMarkers();
+		// get the data
+			$.each(marketData, function(index, value) {
+				//split days into array
+				var arrayDays = value.Tage.split(' ');
+					
+				//loop through days
+				for (var i = 0; i < arrayDays.length; i++) {
 
+					if (arrayDays[i] === day) {
 
-//add something so the display of the marker depends on the date
-var inputDate = new Date("1/25/2015");
-var todaysDate = new Date();
+						//check for the time
+						if (time >= value.ZeitenOn && time <= value.ZeitenOff) {	
+							geo = value.Geolocations
+							var marker = L.marker(L.latLng(geo)).addTo(map);
+							marker.bindPopup("<h1>" + value.Name + "</h1>" + "<br/>" + value.Ort); 
 
-if (inputDate.setHours(0,0,0,0) == todaysDate.setHours(0,0,0,0)) {
-
-//	var marker = L.marker([52.4016530, 13.0621240]).addTo(map);
-
-//	marker.bindPopup("<b>Hello Charlie!</b><br>I am a popup."); // default open: .openPopup();
-
-};
-
-//gets called when button is clicked
-function setMap() {
-	var days = document.getElementById("weekdays");
-	var times = document.getElementById("time");
-	var day = days.options[days.selectedIndex].value;
-	var time = times.options[times.selectedIndex].text;
-
-	getMarkets(day, time);
-}
-
-function getMarkets(day, time) {
-	// get the data
-	$.getJSON( "./data/berlin-markets.json", function(data) {
-		$.each(data, function(index) {
-			//split days into array
-			var arrayDays = data[index].Tage.split(' ');
-				
-			//loop through days
-			for (var i = 0; i < arrayDays.length; i++) {
-
-				if (arrayDays[i] == day) {
-
-					//check for the time
-					if (time >= data[index].ZeitenOn && time <= data[index].ZeitenOff) {	
-						geo = data[index].Geolocations
-						//alert(geo);
-						//geo = [52.4016530, 13.0621240];
-						var marker = L.marker(L.latLng(geo)).addTo(map);
-						marker.bindPopup("<b>" + data[index].Name + "</b>" + "<br>" + data[index].Ort); 
+							markerArray.push(marker);
+						}
 					}
 				}
-			}
+			});
+	}
+
+
+	function deleteMarkers() {
+		$.each(markerArray, function(i, marker) {
+		    map.removeLayer(marker);
+		})  
+	}
+
+	function initDateAndTime() {
+		var d = new Date(),
+			day = d.getDay(),
+			time = d.getHours();
+		if (day > 0) {
+			day--;
+		} else {
+			day = 6;
+		}
+		document.getElementById("weekdays").selectedIndex = day;
+
+		if( time < 8 || time > 22) {
+			time = 0;
+		} else {
+			time -= 8;
+		}
+
+		document.getElementById("time").selectedIndex = time;
+	}
+
+	var mB ={};
+
+	mB.init = function() {
+		map = L.map( 'map', {
+		    center: [52.510, 13.5],
+		    minZoom: 11,
+		    zoom: 10
 		});
-	})
-}
+
+		markerArray = [];
+
+		$.getJSON( "./data/berlin-markets.json", function(data) {
+			marketData = data;
+		});
+
+		L.tileLayer( 'http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+		    attribution: '&copy; <a href="http://osm.org/copyright" title="OpenStreetMap" target="_blank">OpenStreetMap</a> contributors | Tiles Courtesy of <a href="http://www.mapquest.com/" title="MapQuest" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png" width="16" height="16">',
+		    subdomains: ['otile1','otile2','otile3','otile4']
+		}).addTo( map );
+
+		initDateAndTime();
+	}
+
+	mB.setMap = function() {
+		var days = document.getElementById("weekdays");
+		var times = document.getElementById("time");
+		var day = days.options[days.selectedIndex].value;
+		var time = times.options[times.selectedIndex].text;
+
+		getMarkets(day, time);
+	};
+
+	return mB;
+}());
