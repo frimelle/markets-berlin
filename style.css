@@ -11,14 +11,15 @@
 	top:20px;
 	right:20px;
 	padding: 8px;
-	border-radius: 2px;
+	border-radius: 0px;
 }
 
 #corner p {
 	margin-bottom: 8px;
-	font-family:courier;
-    font-size:80%;
+	font-family:tahoma, verdana, sans-serif;
+    font-size:90%;
     color: white;
+    font-weight: 600;
 }
 
 #corner input {
@@ -35,11 +36,11 @@ select {
 	border: none;
 	color: #263248;
 	padding: 3px;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 #corner input:hover, select:hover {
-	background-color: red;
+	background-color:  #ffffcc;
 	cursor: pointer;
 
 	transition: all 0.3s ease-in-out;
