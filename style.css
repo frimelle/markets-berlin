@@ -17,7 +17,7 @@
 #corner p {
 	margin-bottom: 8px;
 	font-family:courier;
-    font-size:80%;
+    font-size:90%;
     color: white;
 }
 
@@ -39,7 +39,7 @@ select {
 }
 
 #corner input:hover, select:hover {
-	background-color: #D3D3D3;
+	background-color: #E0EEEE;
 	cursor: pointer;
 
 	transition: all 0.3s ease-in-out;
