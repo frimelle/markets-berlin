@@ -11,15 +11,14 @@
 	top:20px;
 	right:20px;
 	padding: 8px;
-	border-radius: 0px;
+	border-radius: 2px;
 }
 
 #corner p {
 	margin-bottom: 8px;
-	font-family:tahoma, verdana, sans-serif;
-    font-size:90%;
+	font-family:courier;
+    font-size:80%;
     color: white;
-    font-weight: 600;
 }
 
 #corner input {
@@ -36,11 +35,11 @@ select {
 	border: none;
 	color: #263248;
 	padding: 3px;
-	border-radius: 0px;
+	border-radius: 5px;
 }
 
 #corner input:hover, select:hover {
-	background-color:  #ffffcc;
+	background-color: #D3D3D3;
 	cursor: pointer;
 
 	transition: all 0.3s ease-in-out;
@@ -49,7 +48,7 @@ select {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-#vincentsMutter {
+#footer {
 	width: 100%;
 	padding: 5px;
 	background-color: black;
