@@ -35,7 +35,7 @@ select {
 	border: none;
 	color: #263248;
 	padding: 3px;
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 #corner input:hover, select:hover {
