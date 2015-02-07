@@ -21,7 +21,7 @@ var marketsBerlin = (function() {
 						if (time >= value.ZeitenOn && time <= value.ZeitenOff) {	
 							geo = value.Geolocations
 							var marker = L.marker(L.latLng(geo)).addTo(map);
-							marker.bindPopup("<h1>" + value.Name + "</h1>" + "<br/>" + value.Ort); 
+							marker.bindPopup("<h2>" + value.Name + "</h2>" + "<br/>" + value.Ort + "<br/>" + value.ZeitenOn + " - " + value.ZeitenOff); 
 
 							markerArray.push(marker);
 						}
