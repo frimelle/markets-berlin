@@ -22,8 +22,9 @@ var marketsBerlin = (function() {
 							geo = value.Geolocations
 							var marker = L.marker(L.latLng(geo)).addTo(map);
 							marker.bindPopup("<h2>" + value.Name + "</h2>" + "<br/>" + value.Ort + "<br/>" + value.ZeitenOn + " - " + value.ZeitenOff + "<br/>" 
-								+ "<br/>" + value.Betreiber + "<br/>" + value.Telefonnummer + "<br/>" + "<a href=\"mailto:" + value.EMail + "\">" + value.EMail + "<a/>" + "<br/>" + 
-								"<a href=\"" + "http://" + value.Internetadresse + "\">" + value.Internetadresse + "</a>"); 
+								+ "<br/>" + value.Betreiber + "<br/>" + value.Telefonnummer + "<br/>"
+								+ "<a href=\"mailto:" + value.EMail + "\">" + value.EMail + "<a/>" + "<br/>" 
+								+ "<a href=\"" + "http://" + value.Internetadresse + "\">" + value.Internetadresse + "</a>"); 
 
 							markerArray.push(marker);
 						}
