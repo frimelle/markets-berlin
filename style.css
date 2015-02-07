@@ -14,9 +14,12 @@
 	border-radius: 2px;
 }
 
+p {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
 #corner p {
 	margin-bottom: 8px;
-	font-family: 'Open Sans Condensed', sans-serif;
     font-size:90%;
     color: white;
 }
