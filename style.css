@@ -72,3 +72,8 @@ select {
 h2 {
 	font-weight: bold;
 }
+
+a {
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: white;
+}

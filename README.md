@@ -9,3 +9,7 @@ We used the open data published by the city Berlin. http://daten.berlin.de/daten
 ## Demo: 
 
 http://frimelle.github.io/markets-berlin/
+
+## License:
+
+The Code is under a GNU GPLv3 license.
