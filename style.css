@@ -1,6 +1,6 @@
-#map { 
-	height: 768px; 
-	width:1600px;
+html, body, #map {
+            height: 100%;
+            width: 100%;
 }
 
 #corner { 
