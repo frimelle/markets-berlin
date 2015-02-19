@@ -14,7 +14,7 @@ http://frimelle.github.io/markets-berlin/
 
 ### License:
 
-The Code is under a GNU GPLv3 license.
+Our Code is under a GNU GPLv3 license. That doesn't include the jQuery file which is included in this repository. We downloaded it from the <a href="http://jquery.com/download/">jQuery website</a>.
 
 ## Complete Documentation
 
