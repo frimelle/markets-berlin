@@ -46,17 +46,17 @@ The side is easy to use and discover as well as just to use to get quick access 
 
 Since we built a website, we used HTML, CSS and Javascript. We had to include jQuery for the leaflet API (see more in Map). The buttons are handled by the JavaScript in map.js.We decided to have a reset.css to clean up the defaults of the browser to have more control about what we are doing. We had to include jQuery as jquery-2.1.3.min.js, otherwise we would have gotten errors with the map and a “mixed content warning”.
 
-### Map
+#### Map
 
 We decided to use leaflet, which is an API for OpenStreetMap. You can look up there documentation at <a href="http://leafletjs.com/">their website</a>. We used jQuery due to leaflet.
 OpenStreetMap is the obvious solution for a website, that is based on open data but also nice and easy to use with the leaflet API. Our code using it is included in the map.js. 
 
-### Marker
+#### Marker
 
 The markers we set on the map for the markets are in the same file in the functions setMarker and getMarker in map.js We picked not everything from the data we had because we wanted to keep the website overseeable. 
 Instead we used the things we thought were really important like the name of the market and the address, which is good to have additionally to seeing it on the map. You will need the closing and opening time additionally to the hour you chose, too. The name of the person who runs the market and their contact information as in their telephone number and EMail address are nice to have, too. The website of the market is cool to look up more information. Not all the markets have all of these things. Due to the effort in cleaning up the data we had a name of all the markets but for the rest we had to handle the missing or not existing data so we just left it blank.
 
-### Choose day and time
+#### Choose day and time
 
 On the top right corner you can find buttons to choose day and time. 
 We decided on days and not dates because we wanted our project only the regular markets not the ones  that only are on special occasions like christmas markets. So you can also just check out in general when the regular markets are in your area on the day you usually have time.
