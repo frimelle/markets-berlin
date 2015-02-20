@@ -14,7 +14,7 @@ http://frimelle.github.io/markets-berlin/
 
 ### License:
 
-The Code is under a GNU GPLv3 license.
+Our Code is under a GNU GPLv3 license. That doesn't include the jQuery file which is included in this repository. We downloaded it from the <a href="http://jquery.com/download/">jQuery website</a>.
 
 ## Complete Documentation
 
@@ -52,17 +52,17 @@ To name some examples, the weekdays were often the abbreviations seperated by a 
 
 Since we built a website, we used HTML, CSS and Javascript. We had to include jQuery for the leaflet API (see more in Map). The buttons are handled by the JavaScript in map.js. We decided to have a reset.css to clean up the defaults of the browser to have more control of what we are doing. We had to include jQuery as jquery-2.1.3.min.js, otherwise we would have gotten errors with the map and a “mixed content warning”.
 
-### Map
+#### Map
 
 We decided to use leaflet, which is an API for OpenStreetMap. You can look up their documentation at <a href="http://leafletjs.com/">their website</a>. We used jQuery due to leaflet.
 OpenStreetMap is the obvious solution for a website, that is based on open data but also nice and easy to use with the leaflet API. Our code using it is included in the map.js. 
 
-### Marker
+#### Marker
 
 The markers we set on the map for the markets are in the same file. You can find them in the functions setMarker and getMarker in map.js We didn't use all the data we had because we wanted to keep the website overseeable.
 Instead we used the things we thought were really important like the names of the markets and the addresses. We thought it would be good to additionally see it on the map. I would also be useful to have the closing and opening times. Furthermore we included information on the name of the person who runs the market and their contact information like their phone number and E-Mail address. The website of the market is cool to look up more information. Not all the markets have all of these things. Due to the effort in cleaning up the data we had a name of all the markets but for the rest we had to handle the missing or not existing data so we just left it blank.
 
-### Choose day and time
+#### Choose day and time
 
 On the top right corner you can find buttons to choose day and time. 
 We decided on days and not dates because we decided to only show the regular markets and not the ones that only are on special occasions like christmas markets. This means you can only check out, in general, when the regular markets are on in your area on any given day.
