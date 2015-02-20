@@ -2,7 +2,7 @@
 
 ## Short Overview
 
-This is a website to get an overview on the regular markets in Berlin.
+This is a website to get an overview on the regular markets in Berlin by Charlie Kritschmar and Lucie-Aimée Kaffee.
 
 ### Dataset
 
