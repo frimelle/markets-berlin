@@ -8,11 +8,11 @@ This is a website to get an overview on the regular markets in Berlin.
 
 We used the <a href="http://daten.berlin.de/datensaetze/wochen-und-tr%C3%B6delm%C3%A4rkte">open data published by the city Berlin on weekly markets and fleamarkets</a>. You can find our version of the data in data/berlin-markets.json. We had to edit the data to make it work with our program and convert it from CSV to json. It is now structured and constistent.
 
-### Demo:
+### Demo
 
 http://frimelle.github.io/markets-berlin/
 
-### License:
+### License
 
 Our Code is under a GNU GPLv3 license. That doesn't include the jQuery file which is included in this repository. We downloaded it from the <a href="http://jquery.com/download/">jQuery website</a>.
 
@@ -21,7 +21,7 @@ Our Code is under a GNU GPLv3 license. That doesn't include the jQuery file whic
 ### Idea
 
 This project was created as part of our Open Data course at the HTW Berlin with Michael Hörz.
-The idea was to create an app of some sorts using open data and only other open data tools (i.e. no google maps). Initially we had a different plan, but sadly it wasn't realisable within the scope of our course so we went on the lookout for something else and stumbled across the data mentioned above. We quickly agreed that it would be a sensible thing to make, because at that time there was no overview of the plaes you could go, let alone complete data on everything, even if you researched everything yourself. 
+The idea was to create an app of some sorts using open data and only other open data tools (i.e. no google maps). Initially we had a different plan, but sadly it wasn't realisable within the scope of our course so we went on the lookout for something else and stumbled across the data mentioned above. We quickly agreed that it would be a sensible thing to make, because at that time there was no overview of the places you could go, let alone complete data on everything, even if you researched everything yourself. 
 
 ### Use Cases
 
