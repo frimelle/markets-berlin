@@ -46,7 +46,7 @@ The site is easy to use and discover as well as just to use to get quick access 
 ### Data
 
 So the problem with the data was that it was quite inconsistent and also had huge chuncks missing. It seemed like everyone was just allowed to fill in the datasheet as they pleased without any format rules to follow, or any mandatory fields to fill. For those reasons we decided to edit the data manually. The many inconsistencies made it impractical to do a clean up with a script. 
-To name some examples, the weekdays were often the abbreviations seperated by a comma or a dash or slash, both with and without blanks in between. Telephone numbers were in the wrong places. Same goes for emails and other information. Often the name was in the adress field or vice versa, or there was no adress at all. We had to fix all that and research the missing data. Also we needed geolocations so we had to get that for each adress. We're hoping to make berlin open data use our data sheet from now on for further markets, so the implementation will be essier in the future.
+To name some examples, the weekdays were often the abbreviations seperated by a comma or a dash or slash, both with and without blanks in between. Telephone numbers were in the wrong places. Same goes for emails and other information. Often the name was in the adress field or vice versa, or there was no adress at all. We had to fix all that and research the missing data. Also we needed geolocations so we had to get that for each adress. We're hoping to make berlin open data use our data sheet from now on for further markets, so the implementation will be easier in the future.
 
 ### Technical Details
 
